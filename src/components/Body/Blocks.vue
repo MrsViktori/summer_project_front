@@ -1,6 +1,6 @@
 <template>
   <div class="blocks">
-    <div :class="id===4 ? 'backgroundTwo': 'backgroundOne'">
+    <div :class="'backgroundOne'">
       <div class="sectionImg">
         <img class="sectionCardsImgOval" :src="imgBlockOval">
         <img class="sectionCardsImg" :src="img">
@@ -55,6 +55,9 @@ export default {
   align-items: flex-start;
   justify-content: center;
   gap: 24px;
+}
+.backgroundOne:hover{
+  background: linear-gradient(45deg, #3F6DD6 0%, #2755C1 99.88%);
 }
 .backgroundTwo{
   width: 256px;

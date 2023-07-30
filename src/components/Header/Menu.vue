@@ -20,7 +20,7 @@
         </div>
         <span class="menuTextPhone">{{phone}}</span>
       </div>
-      <button class="menuButton">
+      <button class="menuButton" @click="goToLoginForm">
         <span class="menuTextButton">{{button}}</span>
       </button>
     </div>
@@ -43,6 +43,11 @@ export default {
       button: "Войти"
     }
   },
+  methods: {
+    goToLoginForm() {
+      return this.$router.push('/loginForm')
+    }
+  },
 }
 </script>
 
@@ -51,10 +56,10 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 .menu{
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-direction: row;
   align-items: center;
-  width: 1360px;
+  width: 100%;
   height: 72px;
   background-color: #ffffff;
 }
@@ -109,6 +114,7 @@ export default {
 }
 .menuButton:hover{
   background-color: #D7DDEA;
+  cursor: pointer;
 }
 .menuText{
   font-family: Montserrat;
