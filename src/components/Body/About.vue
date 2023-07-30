@@ -1,38 +1,40 @@
 <template>
   <div class="about">
-    <div class="sectionItemLeft">
-      <div class="aboutTitleOne">
-        <span class="textTitleOne">{{ titleOne }}</span>
-        <span class="textTitleTwo">{{ descriptionTitle }}</span>
-      </div>
-      <div class="aboutTitleTwo">
-        <span class="textTitleThree">{{ titleTwo }}</span>
-        <div class="list">
-          <div class="listOne">
-            <img :src="imgOval" class="listImgOval">
-            <span class="textListOne">{{ listOne }}</span>
-          </div>
-          <div class="listOne">
-            <img :src="imgOval" class="listImgOval">
-            <span class="textListOne">{{ listTwo }}</span>
-          </div>
-          <div class="listOne">
-            <img :src="imgOval" class="listImgOval">
-            <span class="textListOne">{{ listThree }}</span>
-          </div>
-          <div class="listOne">
-            <img :src="imgOval" class="listImgOval">
-            <span class="textListOne">{{ listFour }}</span>
-          </div>
-          <div class="listOne">
-            <img :src="imgOval" class="listImgOvalFive">
-            <span class="textListOne">{{ listFive }}</span>
+    <div class="aboutUnity">
+      <div class="sectionItemLeft">
+        <div class="aboutTitleOne">
+          <span class="textTitleOne">{{ titleOne }}</span>
+          <span class="textTitleTwo">{{ descriptionTitle }}</span>
+        </div>
+        <div class="aboutTitleTwo">
+          <span class="textTitleThree">{{ titleTwo }}</span>
+          <div class="list">
+            <div class="listOne">
+              <img :src="imgOval" class="listImgOval">
+              <span class="textListOne">{{ listOne }}</span>
+            </div>
+            <div class="listOne">
+              <img :src="imgOval" class="listImgOval">
+              <span class="textListOne">{{ listTwo }}</span>
+            </div>
+            <div class="listOne">
+              <img :src="imgOval" class="listImgOval">
+              <span class="textListOne">{{ listThree }}</span>
+            </div>
+            <div class="listOne">
+              <img :src="imgOval" class="listImgOval">
+              <span class="textListOne">{{ listFour }}</span>
+            </div>
+            <div class="listOne">
+              <img :src="imgOval" class="listImgOvalFive">
+              <span class="textListOne">{{ listFive }}</span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="sectionItemRight">
-      <img class="aboutImgServer" :src="imgServer">
+      <div class="sectionItemRight">
+        <img class="aboutImgServer" :src="imgServer">
+      </div>
     </div>
   </div>
   <span class="sectionText">{{ titleThree }}</span>
@@ -65,15 +67,18 @@ export default {
 
 .about {
   display: flex;
+  justify-content: center;
+  margin-top: 77px;
+  width: 100%;
+  height: 400px;
+}
+.aboutUnity{
+  display: flex;
   flex-direction: row;
   border: 1px solid #D7DDEA;
   border-radius: 4px;
-  margin-top: 77px;
   width: 1120px;
-  height: 400px;
-  margin-left: 120px;
 }
-
 .aboutTitleOne {
   margin-left: 32px;
   margin-top: 31px;
@@ -158,7 +163,9 @@ export default {
   font-weight: 700;
   font-size: 28px;
   line-height: 40px;
-  margin-left: 120px;
   margin-top: 56px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 </style>
